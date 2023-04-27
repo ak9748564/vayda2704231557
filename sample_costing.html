@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Sample Costing</title>
+</head>
+<body style="font-family: 'Poppins', sans-serif;">
+    <div class="flex">
+        <div class="w-[60px] grow-0 shrink-0  bg-[#fffef3]">
+            <div class="flex items-center justify-center h-[50px] w-full border-b">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-text-left fill-[#cb9b71] cursor-pointer" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </div>
+            <div class="py-4 flex justify-center">
+                <ul>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-coin fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z"/>
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-square fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                        </svg>
+                    </li>
+                    <li class="cursor-pointer h-[30px] w-[30px] rounded-md hover:bg-[#303030] flex items-center justify-center my-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark fill-[#4d4e53] hover:fill-[#bdbebe]" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="grow shrink">
+            <div class="h-[50px] border-b flex flex-wrap justify-between items-center w-full px-4">
+                <div class="text-[#cb9b71] text-[20px]">Vayda ERP 2.0</div>
+                <div class="text-[#3c3b51]">Sample Costing</div>
+                <div class="flex">
+                    <p class="text-[#8a99aa] text-[12px]">Status:&nbsp;</p>
+                    <p class="text-[#ffbc6c] text-[12px]">Active</p>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap p-4">
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium">Reference No.</label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full placeholder:text-[12px] outline-none" placeholder="45125669">
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium">Date</label>
+                    <input type="date" class="rounded-md border px-4 h-[40px] block text-[12px] w-full outline-none" placeholder="45125669">
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium">Department</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px] outline-none">
+                        <option value="">Department</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Responsible</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">Responsible</option>
+                    </select>
+                </div>
+            </div>
+            <div class="h-[40px] bg-[#ffe6c5] rounded-md text-[#1d1e32] text-[14px] font-medium flex items-center p-3 m-3">Sample Details</div>
+            <div class="flex items-center flex-wrap p-4">
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium">Sample No.</label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full placeholder:text-[12px] outline-none" placeholder="45125669">
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium">Production Group</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px] outline-none">
+                        <option value="">2458989564</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px] outline-none">
+                        <option value="">Sample Type</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px]  mx-3 bg-white font-medium outline-none"></label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">Finished Item</option>
+                    </select>
+                </div>
+            </div>
+            <div class="p-6">
+                <input type="text" class="rounded-md border px-4 h-[40px] w-full placeholder:text-[12px] outline-none" placeholder="Description">
+            </div>
+            <div class="flex items-center flex-wrap p-4">
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium outline-none"></label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">Shade Col</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px] outline-none">
+                        <option value="">Shape</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px] outline-none">
+                        <option value="">Size</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full block text-[12px] outline-none" placeholder="Barcode">
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full block text-[12px] outline-none" placeholder="Net Weight / Piece Kgs">
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap p-4">
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full text-[12px] outline-none" placeholder="Gross Weight / Piece Kgs">
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full text-[12px] outline-none" placeholder="Area Sqm">
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full text-[12px] outline-none" placeholder="Standard CS Area Sqm">
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full text-[12px] outline-none" placeholder="Sq. ft. Wt Kgs">
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] mx-3 bg-white font-medium"></label>
+                    <input type="text" class="rounded-md border px-4 h-[40px] w-full text-[12px] outline-none" placeholder="Sq. Mtr. Sq. Mtr">
+                </div>
+            </div>
+            <div class="px-6">
+                <p class="text-[#232b32] text-[12px] font-medium">Main Sample Image</p>
+                <div class="md:flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="h-[50px] w-[50px] p-2">
+                            <img src="images/image1.jpg" alt="" class="rounded-md">
+                        </div>
+                        <div class="h-[50px] w-[50px] p-2">
+                            <img src="images/img2.jpg" alt="" class="rounded-md">
+                        </div>
+                        <div class="h-[50px] w-[50px] p-2">
+                            <img src="images/img3.jpg" alt="" class="rounded-md">
+                        </div>
+                        <div class="h-[50px] w-[50px] p-2">
+                            <img src="images/img4.jpg" alt="" class="rounded-md">
+                        </div>
+                        <div class="h-[50px] w-[50px] p-2">
+                            <img src="images/plus.jpg" alt="" class="rounded-md">
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="h-[40px] w-[100px] rounded-md bg-[#ff9e26] text-white leading-[40px] text-[12px] m-2">GPP</button>
+                        <button class="h-[40px] w-[100px] rounded-md border border-[#ff9e26] text-[#ff9e26] leading-[40px] text-[12px] m-2">Col / Size</button>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[40px] bg-[#ffe6c5] rounded-md text-[#1d1e32] text-[14px] font-medium flex items-center p-3 m-3">Raw Material Details</div>
+        </div>
+    </div>
+    <div class="flex">
+        <div class="w-[60px] grow-0 shrink-0  bg-[#fffef3]">
+            <div class="flex items-center justify-center h-[50px] w-full border-b">
+                <img src="images/image1.jpg" alt="" class="h-[30px] w-[30px] rounded-full">
+            </div>
+        </div>
+        <div class="grow shrink">
+            <div class="h-[400px] overflow-y-scroll my-5" onclick="showdetails()">
+                <div class="border rounded-md p-4 flex flex-wrap justify-between m-3">
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Type</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Front/Back</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Hank/Cone</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">To Dye Col</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Average</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Final Average</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Dyeing Wastage %</p>
+                        <p class="text-[#606060] text-[12px]">56%</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Prod Wastage %</p>
+                        <p class="text-[#606060] text-[12px]">64%</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Purchase Rate</p>
+                        <p class="text-[#606060] text-[12px]">24000 INR</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Material Process (MP)</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Production Process</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Line Amount</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Items Description</p>
+                        <p class="text-[#606060] text-[12px]">magna nisi massa tincidunt turpis aliquam aget matus</p>
+                    </div>
+                </div>
+                <div class="border rounded-md p-4 flex flex-wrap justify-between m-3">
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Type</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Front/Back</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Hank/Cone</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">To Dye Col</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Average</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Final Average</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Dyeing Wastage %</p>
+                        <p class="text-[#606060] text-[12px]">56%</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Prod Wastage %</p>
+                        <p class="text-[#606060] text-[12px]">64%</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Purchase Rate</p>
+                        <p class="text-[#606060] text-[12px]">24000 INR</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Material Process (MP)</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Production Process</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Line Amount</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Items Description</p>
+                        <p class="text-[#606060] text-[12px]">magna nisi massa tincidunt turpis aliquam aget matus</p>
+                    </div>
+                </div>
+                <div class="border rounded-md p-4 flex flex-wrap justify-between m-3">
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Type</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Front/Back</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Hank/Cone</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">To Dye Col</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Average</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Final Average</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Dyeing Wastage %</p>
+                        <p class="text-[#606060] text-[12px]">56%</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Prod Wastage %</p>
+                        <p class="text-[#606060] text-[12px]">64%</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Purchase Rate</p>
+                        <p class="text-[#606060] text-[12px]">24000 INR</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Material Process (MP)</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Production Process</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Line Amount</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Items Description</p>
+                        <p class="text-[#606060] text-[12px]">magna nisi massa tincidunt turpis aliquam aget matus</p>
+                    </div>
+                </div>
+                <div class="border rounded-md p-4 flex flex-wrap justify-between m-3">
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Type</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Front/Back</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Hank/Cone</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">To Dye Col</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Average</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Final Average</p>
+                        <p class="text-[#606060] text-[12px]">Front</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Dyeing Wastage %</p>
+                        <p class="text-[#606060] text-[12px]">56%</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Prod Wastage %</p>
+                        <p class="text-[#606060] text-[12px]">64%</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Purchase Rate</p>
+                        <p class="text-[#606060] text-[12px]">24000 INR</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Material Process (MP)</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Production Process</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="w-[100px] m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Line Amount</p>
+                        <p class="text-[#606060] text-[12px]">XXXXXXXXXX</p>
+                    </div>
+                    <div class="m-2">
+                        <p class="text-[#9f9ba2] text-[11px]">Items Description</p>
+                        <p class="text-[#606060] text-[12px]">magna nisi massa tincidunt turpis aliquam aget matus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[40px] bg-[#ffe6c5] rounded-md text-[#1d1e32] text-[14px] font-medium flex items-center p-3 m-3">Production Process Details</div>
+            <div class="flex flex-wrap items-center justify-between">
+                <div class="w-[200px] m-3">
+                    <!-- <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Responsible</label> -->
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">Routing Details</option>
+                    </select>
+                </div>
+                <button class="h-[40px] w-[100px] rounded-md bg-[#ff9e26] text-white leading-[40px] text-[12px] m-2">Add New</button>
+            </div>
+            <div class="h-[1px]  bg-black/20 m-4"></div>
+            <div class="p-4 w-full">
+                <table class="border rounded-md w-full">
+                    <thead class="w-full">
+                        <tr class="w-full">
+                            <th class="text-[#585c64] h-[40px] text-[13px] font-normal px-2 py-1 font-medium rounded-md border w-[100px]">Order Id</th>
+                            <th class="text-[#585c64] h-[40px] text-[13px] font-normal px-2 py-1 font-medium rounded-md border text-left">Process</th>
+                            <th class="text-[#585c64] h-[40px] text-[13px] font-normal px-2 py-1 font-medium rounded-md border text-right w-[120px]">Amount INR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-center border">01</td>
+                            <td class="px-2 py-1 border">
+                                <div class="w-full">
+                                    <!-- <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Responsible</label> -->
+                                    <select name="" id="" class="h-[30px] block w-full text-[12px]">
+                                        <option value="">Opening</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-right border">2.24</td>
+                        </tr>
+                        <tr>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-center border">02</td>
+                            <td class="px-2 py-1 border">
+                                <div class="w-full">
+                                    <!-- <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Responsible</label> -->
+                                    <select name="" id="" class="h-[30px] block w-full text-[12px]">
+                                        <option value="">Weaving Jack</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-right border">2.24</td>
+                        </tr>
+                        <tr>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-center border">03</td>
+                            <td class="px-2 py-1 border">
+                                <div class="w-full">
+                                    <!-- <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Responsible</label> -->
+                                    <select name="" id="" class="h-[30px] block w-full text-[12px]">
+                                        <option value="">Stitching</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-right border">2.24</td>
+                        </tr>
+                        <tr>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-center border">04</td>
+                            <td class="px-2 py-1 border">
+                                <div class="w-full">
+                                    <!-- <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Responsible</label> -->
+                                    <select name="" id="" class="h-[30px] block w-full text-[12px]">
+                                        <option value="">Over Clock</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-right border">2.24</td>
+                        </tr>
+                        <tr>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-center border">05</td>
+                            <td class="px-2 py-1 border">
+                                <div class="w-full">
+                                    <!-- <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Responsible</label> -->
+                                    <select name="" id="" class="h-[30px] block w-full text-[12px]">
+                                        <option value="">Wastage %</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="text-[12px] text-[] h-[30px] px-2 py-1 text-right border">2.24</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="h-[40px] bg-[#ffe6c5] rounded-md text-[#1d1e32] text-[14px] font-medium flex items-center p-3 m-3">Sample Costing Details</div>
+            <div class="flex flex-wrap items-center">
+                <div class="w-[300px] m-3 flex justify-between items-center rounded-md border">
+                    <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">Yarn Fabric Cost</label>
+                    <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">INR</option>
+                    </select>
+                </div>
+                <div class="w-[300px] m-3 flex justify-between items-center rounded-md border">
+                    <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">Production Cost</label>
+                    <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">INR</option>
+                    </select>
+                </div>
+                <div class="w-[300px] m-3 flex justify-between items-center rounded-md border">
+                    <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">Trims Cost</label>
+                    <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">INR</option>
+                    </select>
+                </div>
+                <div class="w-[300px] m-3 flex justify-between items-center rounded-md border">
+                    <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">Vendor Margin</label>
+                    <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">INR</option>
+                    </select>
+                </div>
+                <div class="w-[300px] m-3 flex justify-between items-center rounded-md border">
+                    <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">Vendor Margin</label>
+                    <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">INR</option>
+                    </select>
+                </div>
+                <div class="w-[300px] m-3 flex justify-between items-center rounded-md border">
+                    <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">Others</label>
+                    <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">INR</option>
+                    </select>
+                </div>
+                <div class="w-[300px] m-3 flex justify-between items-center rounded-md border">
+                    <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">Direct Expenses</label>
+                    <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">INR</option>
+                    </select>
+                </div>
+                <div class="w-[300px] m-3 flex justify-between items-center rounded-md border">
+                    <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">Contractor Comm.</label>
+                    <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                        <option value="" class="text-[#a7b3c1]">INR</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <button class="h-[40px] w-[100px] rounded-md bg-[#ff9e26] text-white leading-[40px] text-[12px] m-2">Save</button>
+                <button class="h-[40px] w-[100px] rounded-md border border-[#ff9e26] text-[#ff9e26] leading-[40px] text-[12px] m-2">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="w-[100vw] min-h-[100vh] p-10 bg-black/40 flex items-center justify-center absolute top-0 hidden details">
+        <div class="max-w-[800px] h-full p-6 bg-white rounded-md">
+            <h1 class="text-[#0f0f17] text-[18px] font-medium">Edit Raw Material Details</h1>
+            <div class="flex">
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Type</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">45125669</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Front / Back</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">Front</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Hank / Cone</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">Hank</option>
+                    </select>
+                </div>
+            </div>
+            <div class="w-full m-3">
+                <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Item Description</label>
+                <div class="text-[12px] rounded-md border px-4 h-[40px] block w-full flex items-center">45125669</div>
+            </div>
+            <div class="flex">
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">To Dye Col</label>
+                    <div class="text-[12px] rounded-md border px-4 h-[40px] block w-full flex items-center">45125669</div>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Average</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">2.5</option>
+                    </select>
+                </div>
+                <div class="w-[200px] m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Unit of Measure</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">Kilograms</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="w-1/2 m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Dyeing Wastage%</label>
+                    <div class="text-[12px] rounded-md border px-4 h-[40px] block w-full flex items-center">0.75</div>
+                </div>
+                <div class="w-1/2 m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Production Wastage%</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">1.2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="w-1/2 m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Final Average</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">1.2</option>
+                    </select>
+                </div>
+                <div class="w-1/2 m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Production Wastage%</label>
+                    <div class="w-full flex justify-between items-center rounded-md border">
+                        <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">113.50</label>
+                        <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                            <option value="" class="text-[#a7b3c1]">INR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="w-1/2 m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Material Process (MP)</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">Dyeing</option>
+                    </select>
+                </div>
+                <div class="w-1/2 m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">MP Rate</label>
+                    <div class="w-full flex justify-between items-center rounded-md border">
+                        <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">1.5</label>
+                        <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                            <option value="" class="text-[#a7b3c1]">INR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="w-1/2 m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Production Process</label>
+                    <select name="" id="" class="rounded-md border px-4 h-[40px] block w-full text-[12px]">
+                        <option value="">Weaving</option>
+                    </select>
+                </div>
+                <div class="w-1/2 m-3">
+                    <label for="" class="text-[#888890] text-[10px] relative top-[10px] p-1 mx-3 bg-white font-medium outline-none">Line Amount</label>
+                    <div class="w-full flex justify-between items-center rounded-md border">
+                        <label for="" class="text-[#1d1e32] text-[12px] bg-white outline-none px-3">120.75</label>
+                        <select name="" id="" class="rounded-md bg-gray-100 px-4 h-[36px]  block w-[80px] text-[12px]">
+                            <option value="" class="text-[#a7b3c1]">INR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <button class="h-[40px] w-[100px] rounded-md bg-[#ff9e26] text-white leading-[40px] text-[12px] m-2">Save</button>
+                <button class="h-[40px] w-[100px] rounded-md border border-[#ff9e26] text-[#ff9e26] leading-[40px] text-[12px] m-2">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- <img src="images/Screenshot (84).png" alt=""> -->
+    <script>
+        function showdetails(){
+            document.getElementsByClassName("details")[0].style.display = "flex";
+        }
+    </script>
+</body>
+</html>
